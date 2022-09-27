@@ -1,6 +1,7 @@
-package com.example.payroll;
+package com.example.payroll.model;
 
 
+import com.example.payroll.constant.Status;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,7 +11,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "CUSTOMER_ORDER")
-class Order {
+public class Order {
 
     private @Id @GeneratedValue Long id;
 

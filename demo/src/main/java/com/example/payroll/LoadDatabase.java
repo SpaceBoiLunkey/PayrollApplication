@@ -1,5 +1,7 @@
 package com.example.payroll;
 
+import com.example.payroll.repository.EmployeeRepository;
+import com.example.payroll.repository.OrderRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -31,3 +33,7 @@ class LoadDatabase {
         };
     }
 }
+
+//add new column (boolean) "is_deleted" to safely soft delete
+//or, add new column with timestamp "deleted_timestamp" (more recommended)
+//never do hard delete
