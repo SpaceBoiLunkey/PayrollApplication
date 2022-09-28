@@ -3,9 +3,11 @@ package com.example.payroll.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Objects;
 
 @Entity
+@Table(name = "EMPLOYEE")
 public class Employee {
 
     private @Id @GeneratedValue Long id;
@@ -15,7 +17,7 @@ public class Employee {
 
     Employee() {}
 
-    Employee(String firstName, String lastName, String role) {
+    public Employee(String firstName, String lastName, String role) {
 
         this.firstName = firstName;
         this.lastName = lastName;
