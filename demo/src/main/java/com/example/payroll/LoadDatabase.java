@@ -1,5 +1,7 @@
 package com.example.payroll;
 
+import com.example.payroll.repository.EmployeeRepository;
+import com.example.payroll.repository.OrderRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -15,14 +17,14 @@ class LoadDatabase {
     CommandLineRunner initDatabase(EmployeeRepository employeeRepository, OrderRepository orderRepository) {
 
         return args -> {
-            employeeRepository.save(new Employee("Bilbo", "Baggins", "burglar"));
-            employeeRepository.save(new Employee("Frodo", "Baggins", "thief"));
+//            employeeRepository.save(new Employee("Bilbo", "Baggins", "burglar"));
+//            employeeRepository.save(new Employee("Frodo", "Baggins", "thief"));
 
             employeeRepository.findAll().forEach(employee -> log.info("Preloaded " + employee));
 
 
-            orderRepository.save(new Order("MacBook Pro", Status.COMPLETED));
-            orderRepository.save(new Order("iPhone", Status.IN_PROGRESS));
+//            orderRepository.save(new Order("MacBook Pro", Status.COMPLETED));
+//            orderRepository.save(new Order("iPhone", Status.IN_PROGRESS));
 
             orderRepository.findAll().forEach(order -> {
                 log.info("Preloaded " + order);
@@ -31,3 +33,7 @@ class LoadDatabase {
         };
     }
 }
+
+//add new column (boolean) "is_deleted" to safely soft delete
+//or, add new column with timestamp "deleted_timestamp" (more recommended)
+//never do hard delete

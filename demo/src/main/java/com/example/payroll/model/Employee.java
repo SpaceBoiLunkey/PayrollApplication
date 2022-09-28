@@ -1,4 +1,4 @@
-package com.example.payroll;
+package com.example.payroll.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import java.util.Objects;
 
 @Entity
-class Employee {
+public class Employee {
 
     private @Id @GeneratedValue Long id;
     private String firstName;
