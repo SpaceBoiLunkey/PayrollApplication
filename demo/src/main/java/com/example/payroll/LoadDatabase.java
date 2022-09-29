@@ -34,6 +34,3 @@ class LoadDatabase {
     }
 }
 
-//add new column (boolean) "is_deleted" to safely soft delete
-//or, add new column with timestamp "deleted_timestamp" (more recommended)
-//never do hard delete
