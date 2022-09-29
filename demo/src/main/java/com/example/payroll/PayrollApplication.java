@@ -16,7 +16,4 @@ public class PayrollApplication {
 
 
 //serve on AWS
-//configure project for Swagger
 //add test cases for controller (Junit mockito framework)
-
-//drop all tables, set up flyway, then execute that way do double underscores in between words!
